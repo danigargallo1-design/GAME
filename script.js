@@ -476,7 +476,7 @@ function animate() {
     // Spawn enemigos
     const elapsedSeconds = (now - startTime) / 1000;
 
-    if (elapsedSeconds < 30 && !bossWarningShown) {
+    if (elapsedSeconds < 80 && !bossWarningShown) {
         if (now - lastSpawn > CONFIG.spawnRate) {
             const lane = Math.floor(Math.random() * CONFIG.lanes);
 
@@ -1117,5 +1117,6 @@ canvas.addEventListener('pointermove', (e) => {
         placementGhost.visible = false;
     }
 });
+
 
 animate();
