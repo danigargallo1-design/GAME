@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Clockwork Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <div class="overlay"></div>
+        <div class="glass-reflection"></div>
+        <div class="vignette"></div>
+
+        <div id="ui">
+            <div class="top-bar">
+                <div class="minimal-gold">
+                    <img src="assets/oro-2.png" class="gold-icon" alt="Gold">
+                    <span id="gold-display">150</span>
+                </div>
+
+                <div class="clock-display">
+                    <span id="time-val">0</span>s
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="bottom-ui">
+            <div id="health-bar-container">
+                <div id="health-bar"></div>
+            </div>
+        </div>
+
+        <div class="menu-overlay menu-panel">
+            <div class="top-left-corner">
+                <button class="menu-btn battlepass btn-pass-compact">Pase de Batalla</button>
+                <div class="btn-missions-circle">🎯</div>
+            </div>
+            <div class="center-action">
+                <button class="menu-btn primary btn-play-hero">Jugar</button>
+                <div class="xp-mini-bar">
+                    <div class="xp-mini-fill" style="width: 40%;"></div>
+                </div>
+            </div>
+            <div class="menu-footer">VERSION 1.0.5</div>
+        </div>
+    </div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+    }
+    </script>
+
+    <script src="progression.js"></script>
+    <script src="mainmenu.js"></script>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
